@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>+MINA COCO（ミナココ）｜熊本市東区健軍の洋食屋 ランチ・ディナー・テイクアウト</title>
+<meta name="description" content="熊本市東区健軍の小さな洋食屋 +MINA COCO（ミナココ）。ランチ・ディナー・テイクアウト・オードブル。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#24406b; --navy-d:#1b3254; --cream:#faf7f1; --paper:#f3eee4;
+  --ink:#2b2724; --sub:#6a625a; --gold:#b8955a; --gold-l:#d6b97e; --red:#d9574b;
+  --line:rgba(184,149,90,.4);
+  color-scheme:light;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:'Shippori Mincho',serif;line-height:1.9;letter-spacing:.06em;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.en{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;letter-spacing:.02em}
+.sans{font-family:Jost,sans-serif;font-weight:300;letter-spacing:.12em}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:14px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(250,247,241,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;letter-spacing:.08em;color:#fff;transition:color .3s}
+.logo i{font-style:normal;color:var(--red)}
+header.solid .logo{color:var(--navy)}
+.hbtn{font-family:Jost;font-size:12px;letter-spacing:.2em;border:1px solid #fff;color:#fff;padding:8px 16px;border-radius:999px;transition:all .3s}
+header.solid .hbtn{border-color:var(--navy);color:var(--navy)}
+
+/* hero */
+.hero{position:relative;height:min(86svh,820px);min-height:520px;overflow:hidden;background:var(--navy-d);color:#fff}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(15,25,45,.35),rgba(15,25,45,.15) 40%,rgba(15,25,45,.75))}
+.hero .in{position:absolute;left:0;right:0;bottom:12vh;z-index:2;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px));max-width:1080px;margin:0 auto}
+.hero .cap{font-family:Jost;font-weight:300;font-size:11px;letter-spacing:.45em;color:var(--gold-l)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(46px,12vw,110px);line-height:1;letter-spacing:.04em;margin:14px 0 18px}
+.hero h1 i{font-style:normal;color:var(--red)}
+.hero p{font-size:clamp(15px,4vw,20px);letter-spacing:.2em}
+.scroll{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);font-family:Jost;font-size:10px;letter-spacing:.3em;color:#fff;opacity:.8}
+.scroll:after{content:'';display:block;width:1px;height:34px;background:#fff;margin:8px auto 0;animation:sc 2s infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* sections */
+section{padding:96px 0}
+.head{margin-bottom:44px}
+.head .en{display:block;font-size:clamp(44px,11vw,72px);line-height:1;color:var(--navy)}
+.head .ja{display:flex;align-items:center;gap:14px;margin-top:14px;font-size:14px;letter-spacing:.3em;color:var(--sub)}
+.head .ja:before{content:'';width:40px;height:1px;background:var(--gold)}
+.center{text-align:center}.center .ja{justify-content:center}
+
+/* concept */
+.concept{display:grid;gap:40px;align-items:center}
+.concept .ph{position:relative}
+.concept .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.concept .ph img+img{position:absolute;width:46%;right:-12px;bottom:-28px;aspect-ratio:1;border:6px solid var(--cream)}
+.concept .tx p{font-size:15px;margin-bottom:1.3em}
+.concept .lead{font-size:clamp(21px,5.4vw,28px);line-height:1.8;letter-spacing:.12em;margin-bottom:26px;color:var(--navy)}
+@media(min-width:800px){.concept{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* menu */
+.menu{background:var(--paper)}
+.cards{display:grid;gap:44px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr;gap:56px 40px}}
+.card .im{overflow:hidden}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s}
+.card:hover img{transform:scale(1.04)}
+
+.hcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hb{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:14px 22px;border:1px solid #fff;color:#fff;font-size:14px;letter-spacing:.14em}
+.hb.main{background:var(--gold-l);border-color:var(--gold-l);color:var(--navy-d);font-weight:700}
+.lunchbox{background:#fff;border:1px solid var(--line);padding-block:36px;padding-inline:clamp(20px,5vw,48px);margin:0 auto 64px;max-width:720px}
+.plist{list-style:none;margin-top:26px;border-top:1px solid var(--line)}
+.plist li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px dotted var(--line);font-size:15px}
+.plist li span{min-width:0}
+.plist b{font-family:Jost;font-weight:400;letter-spacing:.06em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.plist li.hl span,.plist li.hl b{color:var(--navy);font-weight:700}
+.set{margin-top:24px;text-align:center;font-size:15px;background:var(--paper);padding:16px 12px;line-height:1.8}
+.set strong{color:var(--navy)}
+.note{margin-top:14px;font-size:12px;color:var(--sub);text-align:center}
+.cta{display:flex;align-items:center;justify-content:center;margin:24px auto 0;max-width:360px;padding:17px 20px;background:var(--navy);color:#fff;font-size:15px;letter-spacing:.16em;font-weight:700;transition:background .3s}
+.cta:after{content:'→';margin-left:12px}
+.cta:hover{background:var(--navy-d)}
+.cta.light{background:var(--gold-l);color:var(--navy-d);margin-left:0}
+.center-t{text-align:center}
+.menu>.wrap>.head{margin-bottom:36px}
+
+.hr{display:flex;align-items:center;gap:12px}
+.hig{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #fff;border-radius:50%;color:#fff;transition:all .3s}
+.hig svg{width:18px;height:18px}
+header.solid .hig{border-color:var(--navy);color:var(--navy)}
+.hig2{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:13px;letter-spacing:.12em;color:#fff;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:3px}
+.hig2 svg{width:18px;height:18px}
+.igsec{background:var(--cream)}
+.iglead{text-align:center;font-size:14px;color:var(--sub);margin:-16px auto 32px}
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;max-width:720px;margin:0 auto}
+.iggrid img{width:100%;aspect-ratio:1;object-fit:cover;max-width:100%;transition:opacity .3s}
+.iggrid:hover img{opacity:.85}
+.igcta{gap:12px}
+.igcta svg{width:20px;height:20px;flex:none}
+.igcta:after{content:none}
+.dinner{margin-top:72px;display:grid;gap:44px}
+.dhead .en{display:block;font-size:clamp(36px,9vw,56px);line-height:1;color:var(--navy)}
+.dhead .ja{display:flex;align-items:center;gap:14px;margin-top:12px;font-size:14px;letter-spacing:.3em;color:var(--sub)}
+.dhead .ja:before{content:"";width:40px;height:1px;background:var(--gold)}
+.card.big img{aspect-ratio:16/10}
+.card .no{font-family:Jost;font-size:12px;letter-spacing:.3em;color:var(--gold);margin-top:20px}
+.card h3{font-size:21px;letter-spacing:.14em;font-weight:600;margin-top:4px}
+.card h3 .en{display:block;font-size:30px;color:var(--navy);letter-spacing:.02em;font-weight:500;line-height:1.2}
+.card p{font-size:14px;color:var(--sub);margin-top:10px}
+.card .pr{font-family:Jost;font-weight:400;font-size:17px;color:var(--ink);margin-top:8px;letter-spacing:.08em}
+
+/* signature */
+.sig{background:var(--navy);color:#f5f0e6;position:relative;overflow:hidden}
+.sig .grid{display:grid;gap:40px;align-items:center}
+@media(min-width:800px){.sig .grid{grid-template-columns:1.1fr 1fr;gap:70px}}
+.sig img{width:100%;height:auto;max-width:100%}
+.sig .badge{display:inline-block;font-family:Jost;font-size:11px;letter-spacing:.4em;border:1px solid var(--gold-l);color:var(--gold-l);padding:6px 16px;border-radius:999px}
+.sig h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(50px,13vw,88px);line-height:1;margin:22px 0 10px}
+.sig .ja{font-size:20px;letter-spacing:.2em}
+.sig p{font-size:14px;color:#cdd5e2;margin-top:22px}
+.sig .pr{font-family:Jost;font-weight:300;font-size:44px;color:var(--gold-l);margin-top:18px;letter-spacing:.04em}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover}
+@media(min-width:760px){.gal{grid-template-columns:repeat(4,1fr)}}
+
+/* takeout */
+.take{display:grid;gap:40px}
+@media(min-width:800px){.take{grid-template-columns:1fr 1fr}}
+.take .box{border:1px solid var(--line);padding:30px 26px;background:#fff}
+.take .box img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:22px}
+.take h3{font-size:20px;letter-spacing:.14em}
+.take h3 .en{display:block;font-size:28px;color:var(--navy);line-height:1.2}
+.take p{font-size:14px;color:var(--sub);margin-top:10px}
+.take ul{list-style:none;margin-top:14px;font-size:14px}
+.take li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted var(--line)}
+.take li b{font-family:Jost;font-weight:400}
+
+/* info */
+.info{background:var(--paper)}
+.info .grid{display:grid;gap:44px}
+@media(min-width:800px){.info .grid{grid-template-columns:1fr 1fr;gap:60px}}
+dl{border-top:1px solid var(--line)}
+dl div{display:grid;grid-template-columns:96px 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:15px}
+dt{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.2em;color:var(--gold)}
+dd small{display:block;font-size:12px;color:var(--sub)}
+dd .t{font-family:Jost;font-weight:400;letter-spacing:.06em}
+.map{width:100%;aspect-ratio:4/3;border:0;filter:grayscale(.3)}
+.store{width:100%;aspect-ratio:16/10;object-fit:cover;margin-bottom:16px}
+
+/* reserve */
+.reserve{background:var(--navy-d);color:#f5f0e6;text-align:center}
+.reserve .head .en{color:#fff}.reserve .head .ja{color:#cdd5e2}
+.reserve p{font-size:14px;color:#cdd5e2}
+.btns{display:grid;gap:14px;max-width:440px;margin:36px auto 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:19px 20px;border:1px solid var(--gold-l);font-size:15px;letter-spacing:.16em;transition:all .3s}
+.btn.main{background:var(--gold-l);color:var(--navy-d);font-weight:700}
+.btn:hover{background:#fff;color:var(--navy-d);border-color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+
+footer{background:var(--navy-d);color:#a4b1c6;text-align:center;padding:0 0 40px;font-size:12px}
+footer .logo{color:#fff;font-size:30px;display:block;margin-bottom:6px}
+.fbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr 1.3fr;transform:translateY(100%);transition:transform .35s}
+.fbar.on{transform:none}
+.fbar a{padding:15px 0 calc(15px + env(safe-area-inset-bottom,0px));text-align:center;font-size:13px;letter-spacing:.16em;background:var(--navy);color:#fff}
+.fbar a:nth-child(2){background:var(--navy-d);border-left:1px solid rgba(255,255,255,.15)}
+.fbar a:last-child{background:var(--gold-l);color:var(--navy-d);font-weight:700}
+@media(min-width:800px){.fbar{display:none}}
+
+@media(prefers-reduced-motion:reduce){.scroll:after{animation:none}}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.store-ph{width:100%;aspect-ratio:4/3;object-fit:cover;max-width:100%}
+.maplink{display:inline-flex;margin-top:14px;font-size:14px;letter-spacing:.12em;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px}
+.mapf{width:100%;aspect-ratio:4/3;border:0;margin-top:16px;max-width:100%}
+</style>
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="+MINA COCO（ミナココ）｜熊本市東区健軍の洋食屋">
+<meta property="og:description" content="熊本市東区健軍の小さな洋食屋。ランチ・ディナー・テイクアウト・オードブル。王様トマトのシュークリームが名物。">
+<meta property="og:image" content="https://plussmile0215eye-boop.github.io/minacoco/img/og.jpg">
+<meta property="og:url" content="https://plussmile0215eye-boop.github.io/minacoco/">
+<link rel="canonical" href="https://plussmile0215eye-boop.github.io/minacoco/">
+<meta name="theme-color" content="#24406b">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"+MINA COCO（ミナココ）","servesCuisine":"洋食","telephone":"+81-96-369-0029",
+"address":{"@type":"PostalAddress","postalCode":"862-0911","addressRegion":"熊本県","addressLocality":"熊本市東区","streetAddress":"健軍3丁目39-19 1階","addressCountry":"JP"},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:00","closes":"23:00"}],
+"acceptsReservations":"True","hasMap":"https://maps.app.goo.gl/KSjK5DFLWhkJKLn8A","sameAs":["https://www.instagram.com/mina_c0c0/"]}
+</script>
+</head>
+<body>
+
+
+<header id="hd"><a href="#top" class="logo"><i>+</i>MINA COCO</a><div class="hr"><a class="hig" href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a><a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener" class="hbtn">ネット予約</a></div></header>
+
+<section class="hero" id="top" style="padding:0">
+  <img class="poster" src="img/01-923f52dc.jpg" alt="">
+  <video src="img/02-c25a9453.mp4" poster="img/01-923f52dc.jpg" autoplay muted loop playsinline></video>
+  <div class="in">
+    <div class="cap">CASUAL CREATIVE CUISINE</div>
+    <h1><i>+</i>MINA COCO</h1>
+    <p>健軍の小さな洋食屋</p>
+    <div class="hcta"><a class="hb main" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">ネット予約する</a><a class="hb" href="#menu">メニューを見る</a></div>
+    <a class="hig2" href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@mina_c0c0 をフォロー</a>
+  </div>
+  
+</section>
+
+<section id="concept">
+  <div class="wrap concept">
+    <div class="ph rv"><img src="img/03-c66b89e1.jpg" alt="前菜の盛り合わせ"><img src="img/04-568e244f.jpg" alt="青い外観のお店"></div>
+    <div class="tx rv">
+      <div class="head"><span class="en">Concept</span><span class="ja">ミナココのこと</span></div>
+      <p class="lead">ちょっといい日にも、<br>なんでもない日にも。</p>
+      <p>熊本市東区・健軍。青い外観が目印の、小さな洋食屋です。</p>
+      <p>ひと皿ずつ、ていねいに。パスタはランチでもディナーでも。ランチはハーフコース、ディナーはお肉料理やピザ、お酒に合う一皿を気軽に楽しんでいただけます。</p>
+      <p>ワインと一緒にゆっくり過ごす夜や、テイクアウト・オードブルもどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head center"><span class="en">Menu</span><span class="ja">おすすめ</span></div>
+    <div class="lunchbox">
+      <div class="dhead"><span class="en">Lunch</span><span class="ja">ランチメニュー</span></div>
+      <ul class="plist">
+        <li><span>日替わり +MINACOCOランチ</span><b>¥2,200</b></li>
+        <li><span>シェフの気まぐれパスタランチ</span><b>¥1,980</b></li>
+        <li><span>彩り野菜たっぷりカレーランチ</span><b>¥1,980</b></li>
+        <li><span>お魚と彩り野菜のコラボランチ</span><b>¥2,200</b></li>
+        <li><span>国産ブランドポークのランチ</span><b>¥2,400</b></li>
+        <li><span>国産和牛のステーキランチ</span><b>¥2,980</b></li>
+        <li class="hl"><span>ハーフコースランチ</span><b>¥2,890</b></li>
+      </ul>
+      <p class="set">すべてのランチに<br><strong>前菜・スープ・デザート・お飲み物</strong>がつきます</p>
+      <p class="note">※メニューは仕入れ状況によって変わります<br>ランチ 11:00〜15:00（L.O. 14:00）</p>
+      <a class="cta" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">ランチを予約する</a>
+    </div>
+    <div class="cards">
+      <div class="card rv"><div class="im"><img src="img/05-4de1615c.jpg" alt="ハーフコースランチのメイン"></div>
+        <div class="no">LUNCH</div><h3><span class="en">Half Course Lunch</span>ハーフコースランチ</h3>
+        <p>前菜・パスタ・メイン・デザート。ちょっとしたご褒美や、大切な人とのランチに。</p><div class="pr">¥2,890</div></div>
+      <div class="card rv"><div class="im"><img src="img/06-6f81c8bd.jpg" alt="なすとミートソースのパスタ"></div>
+        <div class="no">LUNCH ／ DINNER</div><h3><span class="en">Pasta</span>パスタ</h3>
+        <p>仕上げにチーズをたっぷり。季節の食材を使った、手づくりの一皿。ランチは「シェフの気まぐれパスタランチ」で。</p></div>
+    </div>
+    <div class="dinner">
+      <div class="dhead"><span class="en">Dinner</span><span class="ja">ディナーメニュー</span></div>
+      <div class="card big"><div class="im"><img src="img/07-92e17558.jpg" alt="国産和牛のステーキ"></div>
+        <div class="no">DINNER</div><h3><span class="en">Wagyu Steak</span>国産和牛のステーキ</h3>
+        <p>国産和牛をじっくり焼き上げて、香りのいいソースを添えて。ワインとご一緒にどうぞ。</p></div>
+      <div class="cards">
+        <div class="card"><div class="im"><img src="img/08-b1681a25.jpg" alt="ピザ"></div>
+          <div class="no">DINNER</div><h3><span class="en">Pizza</span>ピザ</h3>
+          <p>とろけるチーズとトマトの、みんなでシェアしたくなる一枚。</p></div>
+        <div class="card"><div class="im"><img src="img/09-af5af785.jpg" alt="豚足"></div>
+          <div class="no">DINNER</div><h3><span class="en">Pig's Feet</span>豚足</h3>
+          <p>カリッと香ばしく焼き上げて。お酒がすすむ一皿です。</p></div>
+      </div>
+      <p class="set">ディナーメニューは<br><strong>ディナーの時間、テイクアウトもできます</strong></p>
+      <p class="note center-t">ディナー 17:00〜23:00（L.O. 22:00）</p>
+      <a class="cta" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">ディナーを予約する</a>
+    </div>
+  </div>
+</section>
+
+<section class="sig" id="signature">
+  <div class="wrap grid">
+    <img class="rv sigimg" src="img/10-c27dceee.jpg" alt="噂のトマト 王様トマトのシュークリーム">
+    <div class="rv">
+      <span class="badge">SIGNATURE</span>
+      <h2>Tomato<br>Cream Puff</h2>
+      <div class="ja">王様トマトのシュークリーム</div>
+      <p>当店いちばんのおすすめ。王様トマトをまるごと使った、見た目もかわいいとっておきのデザートです。</p>
+      <div class="pr">¥600</div>
+      <a class="cta light" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">予約して食べに行く</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:6px 0">
+  <div class="gal">
+    <img src="img/11-f114a6d6.jpg" alt=""><img src="img/12-2c607310.jpg" alt=""><img src="img/13-dbf3913f.jpg" alt=""><img src="img/14-5a3e7e0d.jpg" alt="">
+  </div>
+</section>
+
+<section id="takeout">
+  <div class="wrap">
+    <div class="head center rv"><span class="en">Take out</span><span class="ja">テイクアウト・オードブル</span></div>
+    <p class="set" style="max-width:720px;margin:0 auto 40px">ランチのカレーに加えて、<br><strong>ディナーメニューもテイクアウトできます</strong><br><span style="font-size:13px;color:var(--sub)">テイクアウト受付 11:00〜14:00 ／ 17:00〜22:00</span></p>
+    <p class="note" style="max-width:720px;margin:-24px auto 40px;font-size:13px;line-height:1.9">ご注文はお電話・ご来店どちらでも承ります。<br>ご来店時のご注文はお時間をいただく場合があるため、<br>お電話での事前注文がおすすめです。<br><a href="tel:0963690029" style="display:inline-block;margin-top:10px;font-family:Jost,sans-serif;font-size:22px;letter-spacing:.08em;color:var(--navy);border-bottom:1px solid var(--gold)">TEL 096-369-0029</a></p>
+    <div class="take">
+      <div class="box rv"><img src="img/15-c6875bd6.jpg" alt="カレーランチのテイクアウト">
+        <h3><span class="en">Curry Lunch</span>本日のカレーランチ</h3>
+        <ul><li>彩りグリル野菜付き<b>¥1,300</b></li><li>彩りグリル野菜なし<b>¥1,100</b></li></ul></div>
+      <div class="box rv"><img src="img/16-d16d058b.jpg" alt="オードブル">
+        <h3><span class="en">Catering</span>オードブル</h3>
+        <p>パーティーや記念日、年末年始に。ご予算・人数に合わせてご相談ください。お気軽にスタッフまでお声がけください。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="igsec" id="instagram">
+  <div class="wrap">
+    <div class="head center"><span class="en">Instagram</span><span class="ja">最新情報はインスタで</span></div>
+    <p class="iglead">日替わりランチや季節のメニュー、お休みの日、<br>オードブルの受付をいち早くお知らせしています。</p>
+    <a class="iggrid" href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener" aria-label="Instagramを見る"><img src="img/17-6f9b9498.jpg" alt=""><img src="img/18-1e760b1a.jpg" alt=""><img src="img/19-d4c6fa93.jpg" alt=""><img src="img/20-ab369a2e.jpg" alt=""><img src="img/21-f6aa43df.jpg" alt=""><img src="img/22-f33029ac.jpg" alt=""></a>
+    <a class="cta igcta" href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><span>@mina_c0c0 をフォローする</span></a>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="wrap">
+    <div class="head rv"><span class="en">Information</span><span class="ja">店舗情報</span></div>
+    <div class="grid">
+      <dl class="rv">
+        <div><dt>NAME</dt><dd>+MINA COCO<small>ミナココ</small></dd></div>
+        <div><dt>LUNCH</dt><dd><span class="t">11:00 – 15:00</span><small>L.O. 14:00</small></dd></div>
+        <div><dt>DINNER</dt><dd><span class="t">17:00 – 23:00</span><small>L.O. 22:00</small></dd></div>
+        <div><dt>CLOSED</dt><dd>火曜日・不定休<small>お休みは<a href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold)">Instagram</a>でお知らせしています</small></dd></div>
+        <div><dt>PARKING</dt><dd>5台</dd></div>
+        <div><dt>ACCESS</dt><dd>〒862-0911<br>熊本県熊本市東区健軍3丁目39-19 1階</dd></div>
+        <div><dt>TEL</dt><dd><a href="tel:0963690029" class="t" style="border-bottom:1px solid var(--gold)">096-369-0029</a></dd></div>
+        <div><dt>TAKE OUT</dt><dd><span class="t">11:00 – 14:00 ／ 17:00 – 22:00</span><small>お電話での事前注文がおすすめです</small></dd></div>
+      </dl>
+      <div class="rv">
+        <img class="store-ph" src="img/04-568e244f.jpg" alt="青い外観の+MINA COCO">
+        <iframe class="mapf" loading="lazy" title="地図" src="https://maps.google.com/maps?q=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%86%8A%E6%9C%AC%E5%B8%82%E6%9D%B1%E5%8C%BA%E5%81%A5%E8%BB%8D3%E4%B8%81%E7%9B%AE39-19&z=16&output=embed"></iframe>
+        <a class="maplink" href="https://maps.app.goo.gl/KSjK5DFLWhkJKLn8A" target="_blank" rel="noopener">Googleマップで道順を見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div class="head center rv"><span class="en">Reservation</span><span class="ja">ご予約・お問い合わせ</span></div>
+    <p class="rv">混み合うことが多いため、事前のご予約がおすすめです。<br>ネット予約なら、空席の確認から予約まで<br>いつでもスマホで完了します。</p>
+    <div class="btns rv">
+      <a class="btn main" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>ネット予約（食べログ）</a>
+      <a class="btn" href="tel:0963690029">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>お電話 096-369-0029</a>
+      <a class="btn" href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram @mina_c0c0</a>
+      <a class="btn" href="https://maps.app.goo.gl/KSjK5DFLWhkJKLn8A" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Googleマップで見る</a>
+    </div>
+  </div>
+</section>
+
+<footer><a href="#top" class="logo"><i style="font-style:normal;color:var(--red)">+</i>MINA COCO</a><a href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin:6px 0 12px;color:#fff;font-size:14px;letter-spacing:.1em"><span style="width:18px;height:18px;display:inline-flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span>@mina_c0c0</a><br>熊本市東区健軍3丁目39-19 ／ © +MINA COCO</footer>
+
+<nav class="fbar" id="fb"><a href="https://maps.app.goo.gl/KSjK5DFLWhkJKLn8A" target="_blank" rel="noopener">MAP</a><a href="https://www.instagram.com/mina_c0c0/" target="_blank" rel="noopener">Instagram</a><a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=43018668" target="_blank" rel="noopener">ネット予約</a></nav>
+
+<script>
+const hd=document.getElementById('hd'),fb=document.getElementById('fb');
+const onScroll=()=>{const y=scrollY,h=innerHeight;hd.classList.toggle('solid',y>h*.6);fb.classList.toggle('on',y>h*.25);};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+
+
+</body>
+</html>
